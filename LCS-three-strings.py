@@ -30,3 +30,5 @@ def lcs3(a, b, c):
             n -= 1
 
     return lcs[::-1]
+
+# TODO: add code for __name__ == "__main__" test
