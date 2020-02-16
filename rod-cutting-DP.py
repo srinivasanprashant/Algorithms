@@ -1,4 +1,4 @@
-def bottom_up_cut_rod(n: int, prices: list):
+def cut_rod(n: int, prices: list):
     """
     Constructs a bottom-up dynamic programming solution for the rod-cutting problem
     Runtime: O(n^2)
@@ -13,9 +13,9 @@ def bottom_up_cut_rod(n: int, prices: list):
     the prices for each piece of rod p.
     Examples
     -------
-    >>> bottom_up_cut_rod(4, [1, 5, 8, 9])
+    >>> cut_rod(4, [1, 5, 8, 9])
     10
-    >>> bottom_up_cut_rod(10, [1, 5, 8, 9, 10, 17, 17, 20, 24, 30])
+    >>> cut_rod(10, [1, 5, 8, 9, 10, 17, 17, 20, 24, 30])
     30
     """
     _enforce_args(n, prices)
@@ -60,7 +60,8 @@ def main():
     # of length 1 resulting in a revenue of 6 * 6 = 36.
     expected_max_revenue = 36
 
-    max_rev_bottom_up = bottom_up_cut_rod(n, prices)
+    max_rev_bottom_up = cut_rod(n, prices)
+    print("Computed best revenue is: ", max_rev_bottom_up)
 
     assert max_rev_bottom_up == expected_max_revenue
 
