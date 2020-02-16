@@ -1,7 +1,6 @@
-
 def merge(a, b, m, e):
-    l = a[b : m + 1]
-    r = a[m + 1 : e + 1]
+    l = a[b: m + 1]
+    r = a[m + 1: e + 1]
     k = b
     i = 0
     j = 0
@@ -41,3 +40,9 @@ def mergesort(a, b, e):
         # print("m",a,b,m,e)
         merge(a, b, m, e)
         return a
+
+
+if __name__ == "__main__":
+    print(mergesort([31, 2, 1, 0, 1, 2, 3, 5, 4], 0, 8))
+
+# TODO: Document and test this to show O(n log n) etc.
