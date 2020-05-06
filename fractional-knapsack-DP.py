@@ -2,9 +2,9 @@ from itertools import accumulate
 from bisect import bisect
 
 
-def fracKnapsack(vl, wt, W, n):
+def fractionalKnapsack(vl, wt, W, n):
     """
-    >>> fracKnapsack([60, 100, 120], [10, 20, 30], 50, 3)
+    >>> fractionalKnapsack([60, 100, 120], [10, 20, 30], 50, 3)
     240.0
     """
 
@@ -22,6 +22,5 @@ def fracKnapsack(vl, wt, W, n):
 
 
 if __name__ == "__main__":
-    import doctest
-
-    doctest.testmod()
+    print("fractionalKnapsack([160, 100, 120], [10, 20, 30], 50, 3)")
+    print(fractionalKnapsack([60, 100, 120], [110, 20, 30], 50, 3))
