@@ -9,17 +9,16 @@ def anagram_checker(word1,word2):
     sorted_word1.sort()
     sorted_word2.sort()
 
-    pos = 0
-    matches = True
-
-    while pos < len(word1) and matches:
-        if sorted_word1[pos] == sorted_word2[pos]:
-            pos = pos + 1
-        else:
-            matches = False
+    if sorted_word1 == sorted_word2:
+        matches = True
+    else:
+        matches = False
 
     return matches
 
 
 if __name__ == "__main__":
-    print(anagram_checker('abcde1', 'edcba'))
+    string1 = 'eartha'
+    string2 = 'hearts'
+    print("Are " + string1 + " and " + string2 + " anagrams?")
+    print(anagram_checker(string1, string2))
