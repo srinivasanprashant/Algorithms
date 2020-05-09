@@ -5,7 +5,7 @@ def anagram_checker(word1,word2):
     sorted_word1 = list(word1)
     sorted_word2 = list(word2)
 
-    # Sort the lists so we can compare. Sorting can be done in O(nlogn) complexity.
+    # Sort the lists so we can compare. Sorting can be done in O(n log n) complexity.
     sorted_word1.sort()
     sorted_word2.sort()
 
